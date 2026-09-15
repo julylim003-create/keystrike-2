@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders the KeyStrike splash screen', () => {
+test('renders the KeyStrike splash screen', async () => {
   render(<App />);
-  expect(screen.getByAltText(/splashscreen/i)).toBeInTheDocument();
-  expect(screen.getByRole('button', { name: /start/i })).toBeInTheDocument();
+  expect(await screen.findByAltText(/splashscreen/i)).toBeInTheDocument();
+  expect(await screen.findByRole('button', { name: /start/i })).toBeInTheDocument();
 });
