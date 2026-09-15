@@ -1,0 +1,157 @@
+.playmenu-page {
+    position: relative;
+    isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 68, 0.925);
+
+
+  min-height: 100vh;
+  margin: 0;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.playmenu-page::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image: var(--music-background);
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.2;
+
+    z-index: 0;
+}
+
+.playmenu-page h1,
+.playmenu-page button,
+.playmenu-page .top-buttons {
+    position: relative;
+    z-index: 1;
+}
+
+.playmenu-page .back {
+    position: absolute;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.playmenu-page .pm {
+    font-family: "IM Fell French Canon", sans-serif;
+    color: white;
+    font-size: 60px;
+    font-weight: lighter;
+    margin-bottom: 1%;
+    letter-spacing: -2px;
+}
+
+.playmenu-page .msclesson {
+    font-family: "IM Fell French Canon", sans-serif;
+    font-weight: bold;
+    width: 145px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: rgba(214, 158, 3, 0.788);
+    transition: transform 0.3s ease;
+}
+
+.playmenu-page .msclesson a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.playmenu-page .goal {
+    font-family: "IM Fell French Canon", sans-serif;
+    font-weight: bold;
+    width: 145px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: rgba(211, 61, 1, 0.767);
+    transition: transform 0.3s ease;
+}
+
+.playmenu-page .goal a {
+    color: white;
+        text-decoration: none;
+        font-size: 25px;
+}
+
+.playmenu-page .minigame {
+    font-family: "IM Fell French Canon", sans-serif;
+    font-weight: bold;
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 12px;
+    background-image: var(--forest-image);
+    background-color: rgba(76, 0, 197, 0.692);
+    transition: transform 0.3s ease;
+}
+
+.playmenu-page .minigame a {
+    color: white;
+        text-decoration: none;
+        font-size: 24px;
+}
+
+.playmenu-page .minigame:hover, .playmenu-page .goal:hover, .playmenu-page .msclesson:hover {
+    transform: scale(1.10);
+}
+
+.playmenu-page .top-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.playmenu-page .back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    
+    font-size: 24px;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+
+
+.playmenu-page .back:hover {
+    transform: scale(1.2);
+}
+
+.playmenu-page .back:active {
+    transform: scale(1.35);
+}
+
+.playmenu-page .back {
+
+    margin-top: -10px;
+    margin-bottom: -90px;
+    width: 80px;
+    height: 80px;
+    margin-right: 400px;
+   
+}
+
+
+
