@@ -244,22 +244,12 @@
 }
 
 /* Generic Note Styling Driven by React State */
-.pianoman-page .note-element {
-  display: inline-block;
-  position: absolute;
-  z-index: 4;
-  border-radius: 50%;
-  width: 35px;
-  height: 20px;
-  object-fit: cover;
-  transition: none; /* Smooth rendering controlled by JS loop */
-}
 
-.score-display {
+.pianoman-page .score-board {
   position: absolute;
-  top: 60px;
+  top: 50px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #fff;
   z-index: 10;
+  color: #fff;
 }
