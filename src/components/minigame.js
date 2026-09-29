@@ -6,7 +6,12 @@ function GameCard({ title, onClick }) {
 }
 
 function Minigame({ onNavigate }) {
-  return <div className="minigame-page"><a href="mainmenu.html"><img src="/assets/back.png" alt="back" className="back" onClick={(event) => { event.preventDefault(); onNavigate('mainmenu'); }} /></a><h1 className="welcome">Welcome to the Minigame!</h1><p className="description">Get ready to test your skills and have fun!</p><GameCard title="Tower Defense" onClick={() => onNavigate('towerdefense')} /><br /><br /><GameCard title="Piano Man" onClick={() => onNavigate('pianoman')} /></div>;
+  return <div className="minigame-page">
+    <a href="mainmenu.html">
+      <img src="/assets/back.png" alt="back" className="back" onClick={(event) => { event.preventDefault(); onNavigate('mainmenu'); }} /></a><h1 className="welcome">Welcome to the Minigame!</h1>
+      <p className="description">Get ready to test your skills and have fun!</p>
+      <GameCard title="Tower Defense" onClick={() => onNavigate('towerdefense')} /><br /><br />
+      <GameCard title="Piano Man" onClick={() => onNavigate('pianoman')} /></div>;
 }
 
 export default Minigame;

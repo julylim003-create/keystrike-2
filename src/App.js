@@ -12,8 +12,11 @@ import Goal from './components/goal';
 import MusicLesson from './components/musiclesson';
 import PianoMan from './components/pianoman';
 import TowerDefense from './components/towerdefense';
+import Keyboard from './components/Keyboard';
+import Keynote from './components/Keynote';
 
 function App() {
+
   const [screen, setScreen] = useState(() => sessionStorage.getItem('keystrike-screen') || 'splash');
   const [user, setUser] = useState(null);
   const [authReady, setAuthReady] = useState(false);
@@ -23,7 +26,6 @@ function App() {
     sessionStorage.setItem('keystrike-screen', destination);
     setScreen(destination);
   };
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
